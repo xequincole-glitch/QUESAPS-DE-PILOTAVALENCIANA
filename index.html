@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUÈ SAPS DE LA PILOTA VALENCIANA?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes wave {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .flag-bg {
+        background: linear-gradient(135deg, #FFD700 15%, #FF0000 15%, #FF0000 25%, #FFD700 25%, #FFD700 35%, #FF0000 35%, #FF0000 45%, #FFD700 45%, #FFD700 55%, #0000FF 55%);
+        background-size: 400% 400%;
+        animation: wave 15s ease infinite;
+      }
+      .perspective-container {
+        perspective: 1000px;
+      }
+      .card-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-blue-50 h-screen overflow-hidden text-slate-800">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>
